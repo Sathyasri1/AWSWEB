@@ -42,6 +42,23 @@
         <h2>Elegant Red Dress</h2>
         <p class="price">$49.99</p>
     </div>
+    <script>
+	(function(d,t) {
+		var BASE_URL="http://chatwoot-rails-api-service:80";
+		var CDN_URL="https://chat-widget.hiverhq.com/chat-widget";
+		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=CDN_URL+"/js/sdk.js";
+		g.defer = true;
+		g.async = true;
+		s.parentNode.insertBefore(g,s);
+		g.onload=function(){
+			window.chatwootSDK.run({
+				websiteToken: 'cVSrr7ek5rJ3yP2gErG3YFxM',
+				baseUrl: BASE_URL
+			})
+		}
+	})(document,"script");
+</script>
 
 </body>
 </html>
